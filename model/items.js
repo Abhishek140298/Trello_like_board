@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
 
 const ItemSchema=mongoose.Schema({
+    name:String,
     lists:[
         {
             list_id:Number,
-            list_title:String,
+            name:String,
             list_task:Array
         }
     ]

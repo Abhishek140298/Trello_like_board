@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <header><Header/></header>
+        <header className=''><Header/></header>
         <main>{children}</main>
         <footer className='text-gray-400 text-center text-xs py-5'>Copyright &#64; {new Date().getFullYear()} All right reserved</footer>
         </body>
