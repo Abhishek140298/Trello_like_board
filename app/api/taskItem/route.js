@@ -6,7 +6,6 @@ await dbConnect()
 const body=await req.json()
 
 const item=await Item.findOne({name:"allList"})
-console.log("FHkshf",body,item)
 
 item.lists=item.lists.map(list=>{ if (list.list_id === body.list_id) {
     return {

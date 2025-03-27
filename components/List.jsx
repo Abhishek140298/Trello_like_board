@@ -48,15 +48,16 @@ async function deleteList(id){
     setNewListAdded(prev=>!prev)
 
 }
+
+
+
 const handleDeleteList=()=>{
-console.log("List",list)
 const res=deleteList(list.list_id)
 
 
 }
 
 async function addTaskApi(task){
-console.log("task",task);
 
 const response=await fetch(`/api/taskItem`,{method:'POST', headers: { "Content-Type": "application/json" },
     body: JSON.stringify(task),})
@@ -96,7 +97,7 @@ setTask(prev=>task)
           </div>
         </div>
       ) : (
-        <div className="bg-listCard rounded-[10px] min-w-[280px] min-h-[95px] p-5 text-white flex gap-[10px] flex-col">
+        <div className="bg-listCard rounded-[10px] min-w-[280px] min-h-[95px] p-5 text-white flex gap-[10px] flex-col" >
           <h3 className="font-bold ">{list.name?list.name:"list"}</h3>
           {/**A title.
 A button to add a new card.
